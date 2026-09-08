@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Forge - a world of combinations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Forge accueil">
+        <span class="brand-mark">F</span>
+        <span>forge</span>
+      </a>
+      <div class="topbar-actions">
+        <span class="save-status" id="saveStatus">Progress saved</span>
+        <button class="icon-button" id="resetButton" title="Recommencer" aria-label="Recommencer">↺</button>
+        <button class="avatar" title="Profil" aria-label="Profil">C</button>
+      </div>
+    </header>
+
+    <section class="workspace" aria-label="Zone de jeu">
+      <div class="workspace-header">
+        <div>
+          <p class="eyebrow">YOUR UNIVERSE</p>
+          <h1>Make something<br><em>unexpected.</em></h1>
+        </div>
+        <div class="discovery-count"><strong id="discoveryCount">4</strong><span>discoveries</span></div>
+      </div>
+      <div class="canvas" id="canvas">
+        <div class="canvas-grid"></div>
+        <div class="canvas-hint" id="canvasHint">
+          <span class="hint-plus">+</span>
+          <span>Drag two things together<br>to make something new</span>
+        </div>
+      </div>
+      <div class="recipe-toast" id="recipeToast" aria-live="polite"></div>
+    </section>
+
+    <aside class="library" aria-label="Elements decouverts">
+      <div class="library-head">
+        <div>
+          <p class="eyebrow">THE LIBRARY</p>
+          <h2>Everything starts here.</h2>
+        </div>
+        <span class="library-total" id="libraryTotal">4</span>
+      </div>
+      <label class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search your discoveries..." autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <div class="element-list" id="elementList"></div>
+      <div class="library-footer">
+        <span><i class="legend-dot"></i> Drag to canvas</span>
+        <span id="newCount">0 new today</span>
+      </div>
+    </aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
